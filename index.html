@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <title>Psychic-Game</title>
+</head>
+<body>
+    <header>
+        <div class="gamename">
+            Psychic Game
+        </div>
+    </header>
+    <div class = 'container'>
+        <div class = 'guess'>Guess what letter computer is thinking of...</div>
+        <div class = 'winscount'>
+            <div>Wins: </div>
+            <div id='winscount'>0</div>
+        </div>
+        <div class = 'lossescount'>
+            <div>Losses: </div>
+            <div id='lossescount'>0</div>
+        </div>
+        <div class ='guessesleft'>
+            <div>Guesses Left: </div>
+            <div id='guessesleft'>9</div>
+        </div>
+        <div class = 'yourguesses'>
+            <div>Your Guesses: </div>
+            <div id='yourguesses'>0</div>
+        </div>
+        <div class = 'mynextguess'>
+            <div>My next guess: </div>
+            <input id='mynextguess'>
+        </div>
+        <button id='actionbutton'>check answer</button>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = 'assets/javascript/game.js'></script>
+</body>
+</html>
