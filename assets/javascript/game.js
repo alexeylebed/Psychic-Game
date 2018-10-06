@@ -5,6 +5,8 @@ let guessesleft = 9;
 let wins = 0;
 let loses = 0;
 
+document.getElementById("mynextguess").focus();
+
 console.log(compguess);
 document.getElementById("winscount").innerHTML = wins;
 document.getElementById("lossescount").innerHTML = loses;
@@ -23,13 +25,25 @@ function makeid() {
   
 function readfrominput(){
     userguess = document.getElementById("mynextguess").value;
+    document.getElementById("mynextguess").focus();
     if((userguess.length == 1)){
       yourguesses = yourguesses + userguess + ' ';
       document.getElementById("yourguesses").innerHTML = yourguesses;
       document.getElementById("mynextguess").value = '';
+
+      document.getElementById('mynextguess').style.backgroundColor = '#006CCE';
+      document.getElementById('mynextguess').style.border = '2px solid #006CCE';
+      document.getElementById('guessheader').style.color = 'black';
+      document.getElementById('mistake').style.display = 'none';
+
       checkanswer(); 
     } else{
-      alert('Type one letter to "My next guess" input');
+
+      document.getElementById('mynextguess').style.backgroundColor = '#FF5F00';
+      document.getElementById('mynextguess').style.border = '2px solid #FF5F00';
+      document.getElementById('guessheader').style.color = '#FF5F00';
+      document.getElementById('mistake').style.display = 'block';
+
       document.getElementById("mynextguess").value = '';
       userguess =  false;
     }

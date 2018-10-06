@@ -29,6 +29,15 @@ header{
     border-bottom: 4px solid #006CCE;
 
 }
+#guess{
+    border: none;
+}
+#choices{
+    color: #607D8B;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 0;
+}
 .winscount , .lossescount , .yourguesses , .guessesleft, .mynextguess{
     display: flex;
     justify-content: left;
@@ -56,6 +65,13 @@ header{
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;  
     color: white;
+}
+#mistake{
+    color: #FF5F00;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: none;
 }
 #actionbutton{
     text-transform: uppercase;

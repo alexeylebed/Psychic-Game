@@ -16,7 +16,8 @@
         </div>
     </header>
     <div class = 'container'>
-        <div class = 'guess'>Guess what letter computer is thinking of...</div>
+        <div class = 'guess' id ='guess'>Guess what letter computer is thinking of...</div>
+        <div class = 'guess' id ='choices' >Avaliable choices: a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
         <div class = 'winscount'>
             <div>Wins: </div>
             <div id='winscount'>0</div>
@@ -34,12 +35,13 @@
             <div id='yourguesses'>0</div>
         </div>
         <div class = 'mynextguess'>
-            <div>My next guess: </div>
+            <div id = 'guessheader'>My next guess: </div>
             <input id='mynextguess'>
         </div>
+        <div id="mistake">Type just one letter(numbers or any other symbols are not permitted)</div>
         <button id='actionbutton'>check answer</button>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = 'assets/javascript/game.js'></script>
 </body>
-</html>
+</html> 
