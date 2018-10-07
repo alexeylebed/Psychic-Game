@@ -1,9 +1,13 @@
-let userguess;
+let userguess = '';
 let yourguesses = '';
 let compguess = makeid();
 let guessesleft = 9;
 let wins = 0;
 let loses = 0;
+var possible = "abcdefghijklmnopqrstuvwxyz";
+
+
+
 
 document.getElementById("mynextguess").focus();
 
@@ -22,11 +26,31 @@ function makeid() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
   };
-  
+
+function chechformat(){
+  let index = 0;
+  if(userguess.length != 1){
+    return false;
+  }
+  for(i = 0; i < possible.length; i++){
+    if(userguess == possible.charAt(i)){
+      index++;
+    }
+  }
+  if(index > 0){
+    return true;
+  } else{
+    return false;
+    
+  }
+} 
+
+chechformat();
+
 function readfrominput(){
     userguess = document.getElementById("mynextguess").value;
     document.getElementById("mynextguess").focus();
-    if((userguess.length == 1)){
+    if(chechformat()){
       yourguesses = yourguesses + userguess + ' ';
       document.getElementById("yourguesses").innerHTML = yourguesses;
       document.getElementById("mynextguess").value = '';
